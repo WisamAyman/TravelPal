@@ -1,0 +1,111 @@
+﻿<Window x:Class="TravelPal.Windows.AccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelPal.Windows"
+        mc:Ignorable="d"
+        Title="AccountWindow" Height="450" Width="800" ResizeMode="NoResize">
+    
+    <Grid Margin="20" Background="MintCream">
+        <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="Travel"
+            FontWeight="Bold"
+            FontSize="40"
+            Foreground="MediumSlateBlue"
+            HorizontalAlignment="Center"
+            FontFamily="Arial"
+        />
+        <Label 
+            x:Name="Welcome"                
+            Content=""
+            FontSize="15"
+            FontWeight="DemiBold"
+            VerticalAlignment="Center"
+        />
+        <Button 
+            x:Name="btnInfo"
+            Grid.Row="0"
+            Grid.Column="5"
+            Height="30"
+            Width="60"
+            Content="Info"
+            FontWeight="DemiBold" Click="btnInfo_Click"
+            />
+        <Button 
+            x:Name="btnSignOut"
+            Grid.Row="6"
+            Grid.Column="5"
+            Height="30"
+            Width="90"
+            Content="Sign Out"
+            FontWeight="DemiBold" 
+            Click="btnSignOut_Click"            
+            />
+        <Button 
+            x:Name="btnUser"
+            Grid.Row="4"
+            Grid.Column="1"
+            Height="30"
+            Width="80"
+            Content="User"
+            FontWeight="DemiBold" Click="btnUser_Click"            
+            />
+        <Button 
+            x:Name="btnAddTravel"
+            Grid.Row="4"
+            Grid.Column="2"
+            Height="30"
+            Width="80"
+            Content="Add travel"
+            FontWeight="DemiBold" Click="btnAddTravel_Click"           
+            />
+        <Button 
+            x:Name="btnRemove"
+            Grid.Row="4"
+            Grid.Column="3"
+            Height="30"
+            Width="80"
+            Content="Remove"
+            FontWeight="DemiBold" Click="btnRemove_Click"            
+            />
+        <Button 
+            x:Name="btnDetails"
+            Grid.Row="4"
+            Grid.Column="4"
+            Height="30"
+            Width="80"
+            Content="Details"
+            FontWeight="DemiBold" Click="btnDetails_Click"
+            />
+        <ListView
+            x:Name="lvListTravels"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            
+            />
+        
+    </Grid>
+</Window>

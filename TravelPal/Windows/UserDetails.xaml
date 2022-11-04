@@ -1,0 +1,133 @@
+﻿<Window x:Class="TravelPal.Windows.UserDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelPal.Windows"
+        mc:Ignorable="d"
+        Title="UserDetails" Height="450" Width="800" ResizeMode="NoResize">
+
+        <Grid Margin="20" Background="MintCream">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="Travelpal"
+            FontWeight="Bold"
+            FontSize="40"
+            Foreground="MediumSlateBlue"
+            HorizontalAlignment="Center"
+            FontFamily="Arial"
+        />
+        <Label 
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="New username"
+            Foreground="MediumSlateBlue"
+            FontWeight="DemiBold"
+            HorizontalContentAlignment="Center"                        
+            />
+        <Label 
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="New password"
+            Foreground="MediumSlateBlue"
+            FontWeight="DemiBold"
+            HorizontalContentAlignment="Center"                        
+            />
+        <Label 
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="New country"
+            Foreground="MediumSlateBlue"
+            FontWeight="DemiBold"
+            HorizontalContentAlignment="Center"                        
+            />
+        <Label 
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="Confirm password"
+            Foreground="MediumSlateBlue"
+            FontWeight="DemiBold"
+            HorizontalContentAlignment="Center"                        
+            />    
+
+        <TextBox
+            x:Name="tbUserName"
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="100"
+            Margin="0 10 0 0"                        
+            />
+        <PasswordBox
+            x:Name="pwbNewPassword"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="100"
+            Margin="0 10 0 0"                        
+            />
+        <PasswordBox
+            x:Name="pwbConfirmPassword"
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="100"
+            Margin="0 10 0 0"                        
+            />    
+
+        <ComboBox 
+            x:Name="cbCountry"
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="0 10 0 0" 
+            Height="20"
+            Width="150"                        
+            />
+
+        <Button 
+            x:Name="btnSave"
+            Grid.Row="5"
+            Grid.Column="2"
+            Height="20"
+            Width="50"
+            Content="Save"
+            FontWeight="DemiBold" Click="btnSave_Click"
+            />
+        <Button 
+            x:Name="btnCancel"
+            Grid.Row="5"
+            Grid.Column="3"
+            Height="20"
+            Width="50"
+            Content="Cancel"
+            FontWeight="DemiBold" Click="btnCancel_Click"
+            />    
+    </Grid>
+</Window>

@@ -1,0 +1,183 @@
+﻿<Window x:Class="TravelPal.Windows.AddTravelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelPal.Windows"
+        mc:Ignorable="d"
+        Title="AddTravelWindow" Height="450" Width="800" ResizeMode="NoResize">
+    
+    <Grid Margin="20" Background="MintCream">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Content="Travelpal"
+            FontWeight="Bold"
+            FontSize="40"
+            Foreground="MediumSlateBlue"
+            HorizontalAlignment="Center"
+            FontFamily="Arial"
+        />
+        <Label 
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            FontWeight="DemiBold"
+            FontSize="15"
+            Foreground="MediumSlateBlue"
+            Content="Choose your destination"
+            HorizontalAlignment="Center"
+            />
+        <Label
+            x:Name="lblTripOrVacation"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            FontWeight="DemiBold"
+            FontSize="15"
+            Foreground="MediumSlateBlue"
+            Content="Trip or Vacation"
+            HorizontalAlignment="Center"
+            Visibility="Hidden"
+            />
+        <Label
+            x:Name="lblLeisureOrWork"
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            FontWeight="DemiBold"
+            FontSize="15"
+            Foreground="MediumSlateBlue"
+            Content="Leisure or Work"
+            HorizontalAlignment="Center"
+            Visibility="Hidden"
+            />
+        <Label
+            x:Name="lblAllInclusive"
+            Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
+            FontWeight="DemiBold"
+            FontSize="11"
+            Margin="0 10 0 0"
+            Content="All Inclusive"
+            Foreground="MediumSlateBlue"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Hidden"
+            />
+        <Label 
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            FontWeight="DemiBold"
+            FontSize="15"
+            Foreground="MediumSlateBlue"
+            Content="Travelers"
+            HorizontalAlignment="Center"
+            />
+        <Label 
+            x:Name="lblTravelersWarning"
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="2"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            FontSize="12"
+            Foreground="Red"
+            />
+        <TextBox 
+            x:Name="tbTravelers"
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="60"
+            Margin="0 10 0 0"
+            PreviewTextInput="NumberValidationTextBox"
+            />
+
+        <ComboBox
+            x:Name="cbCountries"
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="180" 
+            Margin="0 10 0 0"
+            SelectionChanged="cbCountries_SelectionChanged"            
+            />
+        <ComboBox
+            x:Name="cbTripOrVacation"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="100" 
+            Margin="0 10 0 0"
+            SelectionChanged="cbTripOrVacation_SelectionChanged"
+            Visibility="Hidden"
+            />
+        <ComboBox 
+            x:Name="cbTripType"
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="100"
+            Margin="0 10 0 0" SelectionChanged="cbTripType_SelectionChanged"
+            Visibility="Hidden"
+            />
+        <CheckBox 
+            x:Name="chkbxAllInclusive"
+            Grid.Row="2"
+            Grid.Column="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="0 10 47 0" Checked="chkbxAllInclusive_Checked"
+            Visibility="Hidden"
+            />
+        <Button 
+            x:Name="btnSave"
+            Grid.Row="5"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="20"
+            Width="40"
+            Content="Save"
+            FontWeight="DemiBold"
+            FontSize="12" Click="btnSave_Click"
+            IsEnabled="False"
+            />
+        <Button 
+            x:Name="btnReturn"
+            Grid.Row="5"
+            Grid.Column="5"
+            Height="20"
+            Width="60"
+            Content="Return"
+            FontWeight="DemiBold"
+            FontSize="12" Click="btnReturn_Click"
+            />
+
+    </Grid>
+</Window>
